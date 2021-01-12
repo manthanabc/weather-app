@@ -9,6 +9,11 @@ body{
    	    height: 80%;
 }
 
+a {
+	text-decoration: none;
+	color : green;
+}
+
 a.nav {
     color: #737272;
     background-color: lightgrey;
@@ -81,4 +86,8 @@ button {
 	padding: 6px;
     cursor: pointer;
     color: darkgrey
+}
+/*sudo elements */
+a:hover {
+	color: red;
 }
