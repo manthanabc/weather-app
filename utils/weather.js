@@ -9,10 +9,11 @@ url='http://api.weatherstack.com/current?access_key=d3508a9fdc9848f0231af096bc6a
           callback("cannot find location", undefined) 
       } else {
           callback(undefined,{
-                                      temprature :body.current.temperature, 
-                                      feelslike : body.current.feelslike, 
-                                      discription :body.current.weather_descriptions[0], 
-                                      wind_speed : body.current.wind_speed
+              temprature :body.current.temperature, 
+              feelslike : body.current.feelslike, 
+              discription :body.current.weather_descriptions[0], 
+              wind_speed : body.current.wind_speed,
+              wind_dir : body.current.wind_dir
            })
       }
  })

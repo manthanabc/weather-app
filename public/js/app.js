@@ -10,7 +10,6 @@ weatherform.addEventListener('submit', (e)=>{
 	let address = input.value 
 	messagetwo.textContent='Loading ...'
 	fetch('/weather?address='+address).then((res)=>{
-		console.log(res);
 		res.json().then((json)=>{
 	        if(json.error){
 	            console.log(json.error)
@@ -21,7 +20,7 @@ weatherform.addEventListener('submit', (e)=>{
 	            console.log("feelslike -"+json.feelslike)
 	            console.log("windspeed -"+json.wind_speed)
 	            messageone.textContent=''
-	            messagetwo.textContent='Temprature is '+json.temprature+'c feelslike '+json.feelslike+'c and windspeed is '+json.wind_speed + ' km/hr'
+	            messagetwo.textContent='Temprature is '+json.temprature+'c feelslike '+json.feelslike+'c and windspeed is '+json.wind_speed + ' km/hr in ' + json.wind_dir
 	       	}
 	    })
 	})
