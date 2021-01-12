@@ -5,6 +5,7 @@ const hbs = require('hbs')
 const express = require('express')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // paths used by express
 const PublicDirPath = path.join(__dirname, '../public')
@@ -88,4 +89,4 @@ app.get('*', (req, res)=> {
 	res.render('notFound', {message:"page not found"})
 })
 
-app.listen('3000',()=>{console.log("running on port 3000")})
+app.listen(port,()=>{console.log("running on port 3000")})
